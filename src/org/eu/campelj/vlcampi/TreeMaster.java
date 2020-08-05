@@ -10,6 +10,7 @@ import java.util.Base64;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JTree;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
@@ -69,8 +70,8 @@ public class TreeMaster {
 			//System.out.println(con.getResponseCode() + ": " + con.getResponseMessage());
 			
 			if(responseCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
-				System.out.println("Ti idiot si pozabil geslo!");
-				return;
+				JOptionPane.showMessageDialog(null, "V programu manjkata uporabniško ime in geslo!\nKontaktiraj avtorja, da popravi!", "Napaka", JOptionPane.ERROR_MESSAGE);
+				System.exit(-1);
 			}
 			
 			if(responseCode == HttpURLConnection.HTTP_OK) {
