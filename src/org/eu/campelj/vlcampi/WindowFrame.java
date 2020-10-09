@@ -238,7 +238,7 @@ public class WindowFrame extends JFrame {
 				subtitleFile = getSubtitles(subtitles[0]);
 				//System.out.println(subtitleFile);
 			} else {
-				//Uporabnik ima na izbiro veË podnapisov
+				//Uporabnik ima na izbiro veƒç podnapisov
 				
 				String[] names = new String[subtitles.length];
 				
@@ -247,7 +247,7 @@ public class WindowFrame extends JFrame {
 					names[i] = name[name.length - 1];
 				}
 				
-				String selectedValue = (String) JOptionPane.showInputDialog(null, "Izberite ûeljene podnapise!", "Podnapisi", JOptionPane.INFORMATION_MESSAGE, null, names, names[0]);
+				String selectedValue = (String) JOptionPane.showInputDialog(null, "Izberite ≈æeljene podnapise!", "Podnapisi", JOptionPane.INFORMATION_MESSAGE, null, names, names[0]);
 				selectedValue = subtitles[Arrays.asList(names).indexOf(selectedValue)];
 				
 				if(selectedValue != null) {

@@ -70,7 +70,7 @@ public class TreeMaster {
 			//System.out.println(con.getResponseCode() + ": " + con.getResponseMessage());
 			
 			if(responseCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
-				JOptionPane.showMessageDialog(null, "V programu manjkata uporabniško ime in geslo!\nKontaktiraj avtorja, da popravi!", "Napaka", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "V programu manjkata uporabniÅ¡ko ime in geslo!\nKontaktiraj avtorja, da popravi!", "Napaka", JOptionPane.ERROR_MESSAGE);
 				System.exit(-1);
 			}
 			
@@ -124,7 +124,7 @@ public class TreeMaster {
 			    m_tree.setCellRenderer(renderer);
 			}
 		}
-		//Poslušalec za ogled
+		//Posluï¿½alec za ogled
 		m_tree.addTreeSelectionListener(new TreeSelectionListener() {
 			@Override
 			public void valueChanged(TreeSelectionEvent e) {
@@ -133,7 +133,7 @@ public class TreeMaster {
 					return;
 				}
 				
-				//èe ni zadnji element (ima "otroke")
+				//ï¿½e ni zadnji element (ima "otroke")
 				if(!node.isLeaf()) {
 					return;
 				}
@@ -160,7 +160,7 @@ public class TreeMaster {
 			try {
 				JSONArray subDirDir = obj.getJSONArray("files");
 				if(!subDirDir.equals(null) && !subDirDir.isEmpty()) {
-					//Èe ni direktorij ampak samo ena datoteka bo null
+					//ï¿½e ni direktorij ampak samo ena datoteka bo null
 					
 					DirNode subDirObj = subDir(obj.getString("name"), subDirDir);
 					if(subDirObj != null) {

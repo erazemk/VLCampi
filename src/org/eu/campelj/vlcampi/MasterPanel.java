@@ -31,7 +31,7 @@ public class MasterPanel extends JPanel {
 	public void updateDimensions(int width, int height) {
 		m_width = width;
 		m_height = height;
-		//System.out.println("Nastavljam novo öirino: " + m_width + " in viöino: " + height);
+		//System.out.println("Nastavljam novo ≈°irino: " + m_width + " in vi≈°ino: " + height);
 		
 		m_scroll_pane.setPreferredSize(new Dimension(m_width - m_padding, m_height - m_padding));
 		m_scroll_pane.validate();
